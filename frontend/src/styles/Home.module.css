@@ -1,0 +1,47 @@
+
+
+
+.body {
+  /* border: 1px solid black; */
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_text {
+  font-family: var(--font);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.hero_wrapper {
+  display: flex;
+  gap: 5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create_button {
+  cursor: pointer;
+  padding: 1em;
+  font-family: var(--font);
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 0 5px rgb(184, 184, 184);
+  border-radius: var(--border-radius);
+  transition: .25s;
+}
+
+.create_button:hover {
+  background-color: rgb(255, 213, 205);
+  color: rgb(236, 35, 0);
+  transform: scale(1.2);
+}
+
+.create_button a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,72 @@
+.deckmanager {
+  position: absolute;
+  height: 100%;
+  border-top-right-radius: var(--card-border-radius);
+  border-bottom-right-radius: var(--card-border-radius);
+  padding: 1em;
+
+  left: 0x;
+  z-index: 10;
+  transition: left .25s;
+
+  background-color: white;
+  border: 2px solid rgb(220, 220, 220);
+}
+
+.deckmanager h1 {
+  font-family: var(--font);
+  color: rgb(71, 71, 255);
+  margin-bottom: .75em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  width: 100%;
+  padding: 1em;
+}
+
+.buttons >* {
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: .5em;
+  font-family: var(--font);
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.buttons >*:hover {
+  background-color: white;
+  outline: 1px solid grey;
+}
+
+.toggle_button {
+  position: absolute;
+  border: 1px solid black;
+  top: 20px;
+  left: calc(100% + .5em);
+  width: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-family: var(--font);
+}
+
+.toggle_button svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.5px;
+  fill: transparent;
+  stroke: var(--light-purple);
+  transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+.toggle_button:hover svg {
+  fill: var(--light-purple);
+}

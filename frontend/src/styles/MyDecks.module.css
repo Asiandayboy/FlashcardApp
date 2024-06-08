@@ -1,0 +1,40 @@
+.wrapper {
+    /* width: min(800px, 90%); */
+    padding: 2em;
+    margin: 0;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    
+}
+
+.header {
+    font-family: var(--font);
+    font-size: 1.25rem;
+    margin: 1em 0;
+}
+
+.deck_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em; */
+}
+
+
+
+.separator {
+    height: 1.5px;
+    width: 100%;
+    background-color: #e1e1e1;
+}

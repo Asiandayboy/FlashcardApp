@@ -1,0 +1,29 @@
+:root {
+  --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --navbar-padding: 1.25em;
+  --border-radius: 5px;
+  --light-purple: rgb(71, 71, 255);
+  --navbar-height: 60px;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+

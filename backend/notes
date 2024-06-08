@@ -1,0 +1,10 @@
+API 
+
+routing 
+  - making different HTTP request endpoints at different parts of our code
+  - the router takes in the requested URL and possible GET and POST paramters
+    and then decides which request handler to send the request to
+
+request handlers
+  - they answer the requests and return a response of some sort, like an HTML
+    page

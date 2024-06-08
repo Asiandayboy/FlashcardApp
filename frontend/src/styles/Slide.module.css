@@ -1,0 +1,38 @@
+:root {
+  --padding: .5em;
+}
+
+.slide {
+  box-shadow: 0 0 5px rgb(211, 211, 211);
+  background-color: white;
+  border-radius: 5px;
+  padding: var(--padding);
+  min-width: 100px;
+  height: 67px;
+  aspect-ratio: 3/2;
+  overflow-wrap: break-word;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  transition: .15s transform;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  font-size: .5rem;
+  user-select: none;
+}
+
+.slide div {
+  width: 100%;
+}
+
+.slide:hover {
+  transform: scale(1.2);
+}
+
+.selected {
+  border: 2px solid var(--light-purple);
+}

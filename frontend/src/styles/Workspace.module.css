@@ -1,0 +1,198 @@
+:root {
+  --slider-margin-bottom: .5rem;
+  --emptycard-margin-top: 6rem;
+  --emptycard-height: 450px;
+  --emptycard-width: min(80vw, 800px);
+  --emptycard-border-radius: 15px;
+  --emptycard-padding: 1.5em;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-purple);
+  border-radius: 5px;
+}
+
+
+
+.workspace {
+  /* border: 2px solid var(--light-purple); */
+  /* background-color: var(--light-purple); */
+  min-height: calc(100vh - var(--navbar-height));
+
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+.deckname {
+  position: absolute;
+  font-family: var(--font);
+  margin-top: 2em;
+  text-align: start;
+  /* font-size: 1rem; */
+}
+
+.cardAction_buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.cardAction_buttons >* {
+  user-select: none;
+  padding: .5em 1em;
+}
+
+
+.slider {
+  /* border: 2px solid orange; */
+  margin-bottom: var(--slider-margin-bottom);
+  width: min(75%, 750px);
+  padding: .25em;
+  justify-content: center;
+}
+
+.slide_wrapper {
+  padding: .5em;
+  /* border: 2px solid black; */
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 1em;
+}
+
+
+.ok {
+  border: 2px solid purple;
+  padding: 2em;
+}
+
+.empty_card {
+  border-radius: var(--emptycard-border-radius);
+  width: var(--emptycard-width);
+  height: var(--emptycard-height);
+  margin-top: var(--emptycard-margin-top);
+  padding: var(--emptycard-padding);
+
+  border: 3px solid rgb(229, 229, 229);
+  background-color: rgb(247, 247, 247);
+  color: rgb(184, 184, 184);
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  position: relative;
+  cursor: pointer;
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.empty_card:hover {
+  background-color: rgb(231, 231, 231);
+  border-color: rgb(216, 216, 216);
+  color: rgb(135, 135, 135);
+}
+
+.empty_card:focus {
+  outline: 3px solid var(--light-purple);
+}
+
+.adding_card {
+  font-family: var(--font);
+  height: var(--emptycard-height);
+  width: var(--emptycard-width);
+  margin-top: var(--emptycard-margin-top);
+  border-radius: var(--emptycard-border-radius);
+  padding: var(--emptycard-padding);
+  padding-bottom: .5em;
+  font-size: 2rem;
+
+  background-color: rgb(230, 230, 230);
+  /* border: 3px solid var(--light-purple); */
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5em;
+}
+
+
+.adding_card h3 {
+  font-weight: 200;
+}
+
+.adding_card textarea {
+  width: 100%;
+  height: 85%;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+.adding_card-topsection {
+  display: flex;
+  /* border: 2px solid black; */
+  height: 100%;
+  justify-content: space-between;
+}
+
+.adding_card-botsection {
+  display: flex;
+  justify-content: center;
+  gap: .25em;
+}
+
+.adding_card-front {
+  /* border: 1px solid tomato; */
+  width: 49%;
+}
+
+.adding_card-back {
+  /* border: 1px solid blue; */
+  width: 49%;
+}
+
+.adding_card-buttons >* {
+  /* border: 1px solid orange; */
+  width:75px;
+}
+
+.deckmanager_button {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 25%;
+  border: none;
+  padding: .5em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(190, 190, 190);
+  transition: .25s;
+}
+
+.deckmanager_button svg {
+  display: block;
+  stroke: var(--light-purple);
+  stroke-width: 1.5px;
+}
+
+.deckmanager_button:hover {
+  fill: black;
+}
+

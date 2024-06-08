@@ -1,0 +1,140 @@
+:root {
+  --card-margin-top: 3em;
+  --card-height: 450px;
+  --card-width: min(75vw, 750px);
+  --card-border-radius: 15px;
+  --card-padding: 2em;
+  --flip-animation-duration: .5s;
+}
+
+
+/* flip animation */
+.wrapper {
+  margin-top: 6em;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: var(--card-width);
+  height: var(--card-height);
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all var(--flip-animation-duration);
+  transition: all var(--flip-animation-duration);
+  font-size: 2rem;
+}
+
+.card .front, .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 0 20px rgb(215, 215, 215);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: var(--card-padding);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word;
+  text-align: center;
+  overflow: auto;
+  padding-bottom: .25em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content div {
+  width: 100%;
+}
+
+.card .back {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.wrapper input {display: none;}
+
+.wrapper input[type="checkbox"]:checked + .card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+
+
+
+.number {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 1.25em;
+  margin: 0;
+  user-select: none;
+}
+
+.previous_button {
+  position: absolute;
+  bottom: 1em;
+  left: 1.5em;
+  padding: .5em;
+  border: none;
+  background-color: transparent;
+  transition: var(--navbar-item-transition-t);
+  cursor: pointer;
+  user-select: none;
+}
+
+.next_button {
+  position: absolute;
+  bottom: 1em;
+  right: 1.5em;
+  padding: .5em;
+  border: none;
+  background-color: transparent;
+  transition: var(--navbar-item-transition-t);
+  cursor: pointer;
+  user-select: none;
+}
+
+.previous_button:hover, .next_button:hover {
+  color: var(--light-purple);
+}
+
+.flip {
+  transform: .5s;
+  transform-style: preserve-3d;
+  position: relative;
+  animation: flipX var(--flip-animation-duration);
+}
+
+@keyframes flipX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg) skewX(-10deg);
+  }
+  100% {
+    transform: rotateX(180deg) scale(1,-1) ;
+  }
+}
+
+

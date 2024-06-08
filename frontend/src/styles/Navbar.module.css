@@ -1,0 +1,72 @@
+:root {
+  --navbar-item-transition-time: .1s;
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+  height: var(--navbar-height);
+
+  /* background-color: rgb(147, 198, 220); */
+  padding: var(--navbar-padding);
+
+  font-family: var(--font);
+  box-shadow: 0 0 10px grey;
+  position: relative;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.navbar li a {
+  color: black;
+  cursor: pointer;
+  transition: .1s;
+  border-radius: 15px;
+}
+
+.navbar li button {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: .25em 1em;
+  background-color: white;
+  color: #777;
+  font-family: var(--font);
+  font-size: 1rem;
+  transition-property: color, border, background-color;
+  transition-duration: .2s;
+}
+
+.navbar li a:hover {
+  color: rgb(71, 71, 255);
+}
+
+.navbar li button:hover {
+  color: var(--light-purple);
+  border: 2px solid rgb(71, 71, 255);
+}
+
+.navbar .username_header {
+  position: absolute;
+  left: 1em;
+}
+
+
+
+
+
+
